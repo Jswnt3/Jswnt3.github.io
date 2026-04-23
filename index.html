@@ -707,15 +707,6 @@ function matrixDissolve(el){
     }, i * 35 + Math.random() * 40);
   });
 }
-nameLines.forEach(el => {
-  let busy = false;
-  el.addEventListener('mouseenter', () => {
-    if(busy) return; busy = true;
-    matrixDissolve(el);
-    setTimeout(() => { busy = false; }, 900);
-  });
-});
-setTimeout(() => { nameLines.forEach(el => { el.style.opacity = '1'; el.classList.add('visible-pulse'); }); }, 2200);
 
 // Custom cursor
 const cursor = document.getElementById('cursor');
